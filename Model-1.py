@@ -123,13 +123,6 @@ def save_feature_distributions(df, target_col="GPA", drop_cols=None, out_dir="pl
         except Exception as e:
             print(f"Failed to plot {col}: {e}")
 
-
-# Save plots for all features except Student_ID (if present)
-SAVE_DIR = "plots"
-DROP_PLOT_COLS = ["Student_ID"]
-save_feature_distributions(student_data, target_col=TARGET, drop_cols=DROP_PLOT_COLS, out_dir=SAVE_DIR)
-
-
 def save_scatter_plots(df, target_col="GPA", drop_cols=None, out_dir="plots/scatter"):
     """Create plots relating features to target and save PNGs.
 
